@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+header {
+  padding: 20px;
+  background: #414141;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+nav {
+  overflow: hidden;
+  background-color: #575757;
+}
+
+/* Style the navigation bar links */
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Right-aligned link */
+nav a.right {
+  float: right;
+}
+
+/* Change color on hover */
+nav a:hover {
+  background-color: #a3a3a3;
+  color: black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 2. Add some space between each pill */
+.contact li {
+    margin-bottom: 10px;
+}
+
+/* 3. Style the link (<a>) itself as a pill */
+.contact a {
+    display: block; /* Makes the entire area clickable, not just the text */
+    background-color: #575757; /* A dark gray that matches your nav bar */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px; /* This creates the rounded pill shape */
+    text-align: center;
+    text-decoration: none; /* Removes the default link underline */
+    
+    /* Adds a smooth transition for the hover effect */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* 4. Add a hover effect for interactivity */
+.contact a:hover {
+    background-color: #a3a3a3; /* Matches your nav bar hover effect */
+    color: black;
+}
+
+.workEntry {
+  color: rgb(0, 0, 0);
+}
+
+.workEntry h3 {
+  margin-bottom: 0px;
+  border-left: 3px solid #575757;
+  /* Accent line */
+  padding-left: 10px;
+}
+
+.workEntry h4 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+}
+
+.workEntry h3,
+.workEntry h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.workEntry ul {
+  padding-left: 20px;
+
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+.workEntry li {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.education h3,
+.education h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.education h3 {
+  margin-bottom: 6px;
+  border-left: 3px solid #575757;
+  /* Accent line */
+  padding-left: 10px;
+}
+
+.education h4 {
+  margin-top: 6px;
+  margin-bottom: 0px;
+
+}
+
+/* --- Skills Section Styles --- */
+
+#skills h2 {
+  margin-bottom: 20px;
+  /* Adds space below the main "Technical Skills" title */
+}
+
+.skill-category {
+  margin-bottom: 20px;
+  /* Adds space between each category */
+}
+
+.skill-category h3 {
+  margin-bottom: 10px;
+  border-left: 3px solid #575757;
+  /* Accent line */
+  padding-left: 10px;
+}
+
+/* This is where the pill/tag styling happens */
+.skill-category ul {
+  list-style-type: none;
+  /* Removes the default bullets */
+  padding-left: 0;
+
+  display: flex;
+  /* Activates flexbox */
+  flex-wrap: wrap;
+  /* Allows pills to wrap to the next line */
+  gap: 10px;
+  /* Creates space between the pills */
+}
+
+.skill-category li {
+  background-color: #575757;
+  /* Pill background color */
+  color: white;
+  /* Pill text color */
+  padding: 8px 15px;
+  /* Vertical and horizontal space inside the pill */
+  border-radius: 20px;
+  /* This creates the rounded pill shape */
+  font-size: 0.9em;
+}
+
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #414141;
+  color: white;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: rgb(197, 197, 197);
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+.project-page h2 {
+    margin-bottom: 20px; /* Space below the main project title */
+}
+
+.project-page figure {
+    margin: 0 0 20px 0; /* Remove default browser margins */
+}
+
+.project-page img {
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* A subtle shadow */
+}
+
+.project-page figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
